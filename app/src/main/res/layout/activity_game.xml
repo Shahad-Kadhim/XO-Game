@@ -5,5 +5,173 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Game">
+    <ImageButton
+        android:id="@+id/home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:padding="10dp"
+        android:onClick="goToHome"
+        android:background="@drawable/btn"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_baseline_home_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/black"
+        android:elevation="16dp"/>
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn"
+        android:text="p1      0 -  0      p2"
+        android:gravity="center"
+        android:paddingVertical="16dp"
+        android:paddingHorizontal="32dp"
+        android:backgroundTint="@color/white"
+        android:elevation="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/grid"/>
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="28dp"
+    android:src="@drawable/line"
+    android:orientation="horizontal"
+    app:layout_constraintVertical_bias="0.33"
+    app:layout_constraintTop_toTopOf="@+id/grid"
+    app:layout_constraintBottom_toBottomOf="@+id/grid"
+    app:layout_constraintStart_toStartOf="@+id/grid"
+    app:layout_constraintEnd_toEndOf="@id/grid"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:src="@drawable/line"
+        android:orientation="horizontal"
+        app:layout_constraintVertical_bias="0.66666"
+        app:layout_constraintTop_toTopOf="@+id/grid"
+        app:layout_constraintBottom_toBottomOf="@+id/grid"
+        app:layout_constraintStart_toStartOf="@+id/grid"
+        app:layout_constraintEnd_toEndOf="@id/grid"/>
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:background="@drawable/line_v"
+        android:layout_marginEnd="130dp"
+        android:backgroundTint="@color/black"
+        app:layout_constraintTop_toTopOf="@+id/grid"
+        app:layout_constraintBottom_toBottomOf="@+id/grid"
+        app:layout_constraintStart_toStartOf="@+id/grid"
+        app:layout_constraintEnd_toEndOf="@id/grid"
+         />
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:background="@drawable/line_v"
+        android:layout_marginStart="130dp"
+        android:backgroundTint="@color/black"
+        app:layout_constraintTop_toTopOf="@+id/grid"
+        app:layout_constraintBottom_toBottomOf="@+id/grid"
+        app:layout_constraintStart_toStartOf="@+id/grid"
+        app:layout_constraintEnd_toEndOf="@id/grid"
+        />
+    <GridLayout
+        android:id="@+id/grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3"
+        app:layout_constraintBottom_toTopOf="@id/playAgainBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score">
+
+        <ImageView
+            android:id="@+id/r1c1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:onClick="playHuman"
+            android:tag="  " />
+
+        <ImageView
+            android:id="@+id/r1c2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:onClick="playHuman"
+            android:tag="  " />
+
+        <ImageView
+            android:id="@+id/r1c3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:onClick="playHuman"
+            android:tag="  " />
+
+        <ImageView
+            android:id="@+id/r2c1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:onClick="playHuman"
+            android:tag="  " />
+
+        <ImageView
+            android:id="@+id/r2c2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:onClick="playHuman"
+            android:tag="  " />
+
+        <ImageView
+            android:id="@+id/r2c3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:onClick="playHuman"
+            android:tag="  " />
+
+        <ImageView
+            android:id="@+id/r3c1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:onClick="playHuman"
+            android:tag="  " />
+
+        <ImageView
+            android:id="@+id/r3c2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:onClick="playHuman"
+            android:tag="  " />
+
+        <ImageView
+            android:id="@+id/r3c3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:onClick="playHuman"
+            android:tag="  " />
+    </GridLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/playAgainBtn"
+        android:layout_width="220dp"
+        android:onClick="playAgain"
+        android:visibility="invisible"
+        android:layout_height="wrap_content"
+        android:text="Play again"
+        android:padding="16dp"
+        android:background="@drawable/btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/grid"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
