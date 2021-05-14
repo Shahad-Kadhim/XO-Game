@@ -73,12 +73,14 @@
 
         <RadioButton
             android:id="@+id/x_btn"
+            android:buttonTint="#C9B9EE"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="60dp" />
 
         <RadioButton
             android:id="@+id/o_btn"
+            android:buttonTint="#C9B9EE"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="60dp" />
